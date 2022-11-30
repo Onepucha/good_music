@@ -4,6 +4,13 @@ import createRouter from "@/src/router";
 import { isPromise } from "@/src/utils";
 import { createPinia } from "pinia";
 import { createApp } from "vue";
+import { Quasar } from 'quasar';
+
+// Import icon libraries
+import '@quasar/extras/material-icons/material-icons.css'
+
+// Import Quasar css
+import 'quasar/src/css/index.sass'
 
 const router = createRouter();
 const store = createPinia();
@@ -65,6 +72,10 @@ router.beforeResolve(async (to, from, next) => {
 if (window.__INITIAL_STATE__) {
     store.state.value = window.__INITIAL_STATE__;
 }
+
+app.use(Quasar, {
+    plugins: {}, // import Quasar plugins and add here
+})
 
 router.isReady().then(() => {
     app.mount("#app", true);

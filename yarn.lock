@@ -69,6 +69,16 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
+"@quasar/extras@^1.15.6":
+  "integrity" "sha512-lG3wrcz47c86N/j1ULZugmyVfwpmnsJpjtSWh+LhaFfe0g1kTMdAnxkWGKsa3ouZ4QBcnkrNan0kYSnKc3MiBg=="
+  "resolved" "https://registry.npmjs.org/@quasar/extras/-/extras-1.15.6.tgz"
+  "version" "1.15.6"
+
+"@quasar/vite-plugin@^1.2.3":
+  "integrity" "sha512-ErSyY3cHz40GBIQUmqSI8OzzshJM5pLq33Yq3NEtYdWYh1NuIc4C766xkatUdxvhX9sLNnQQZax2ysJ5u7kUJA=="
+  "resolved" "https://registry.npmjs.org/@quasar/vite-plugin/-/vite-plugin-1.2.3.tgz"
+  "version" "1.2.3"
+
 "@rollup/plugin-alias@^3.1.9":
   "integrity" "sha512-QI5fsEvm9bDzt32k39wpOwZhVzRcL5ydcffUHMyLVaVaLeC70I8TJZ17F1z1eMoLu4E/UOcH9BWVkKpIKdrfiw=="
   "resolved" "https://registry.npmjs.org/@rollup/plugin-alias/-/plugin-alias-3.1.9.tgz"
@@ -265,7 +275,7 @@
     "@typescript-eslint/types" "5.10.1"
     "eslint-visitor-keys" "^3.0.0"
 
-"@vitejs/plugin-vue@^2.1.0":
+"@vitejs/plugin-vue@^2.0.0 || ^3.0.0", "@vitejs/plugin-vue@^2.1.0":
   "integrity" "sha512-AZ78WxvFMYd8JmM/GBV6a6SGGTU0GgN/0/4T+FnMMsLzFEzTeAUwuraapy50ifHZsC+G5SvWs86bvaCPTneFlA=="
   "resolved" "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-2.1.0.tgz"
   "version" "2.1.0"
@@ -1184,11 +1194,6 @@
   "resolved" "https://registry.npmjs.org/ignore/-/ignore-5.2.0.tgz"
   "version" "5.2.0"
 
-"immutable@^4.0.0":
-  "integrity" "sha512-zIE9hX70qew5qTUjSS7wi1iwj/l7+m54KWU247nhM3v806UdGj1yDndXj+IOYxxtW9zyLI+xqFNZjTuDaLUqFw=="
-  "resolved" "https://registry.npmjs.org/immutable/-/immutable-4.0.0.tgz"
-  "version" "4.0.0"
-
 "import-fresh@^3.0.0", "import-fresh@^3.2.1":
   "integrity" "sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw=="
   "resolved" "https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.0.tgz"
@@ -1568,6 +1573,11 @@
   "resolved" "https://registry.npmjs.org/qs/-/qs-6.9.6.tgz"
   "version" "6.9.6"
 
+"quasar@^2.10.2", "quasar@^2.8.0":
+  "integrity" "sha512-y6suu0f2hJKrnFPHzx+p2EBVGzDF6xHaqYGkDIsMNkhxsrO9Qi2+dZCjq1J6+48EJiqPEOn8t9X/gT7yLSSnLw=="
+  "resolved" "https://registry.npmjs.org/quasar/-/quasar-2.10.2.tgz"
+  "version" "2.10.2"
+
 "queue-microtask@^1.2.2":
   "integrity" "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="
   "resolved" "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
@@ -1670,14 +1680,12 @@
   "resolved" "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz"
   "version" "2.1.2"
 
-"sass@*", "sass@^1.49.0":
-  "integrity" "sha512-TVwVdNDj6p6b4QymJtNtRS2YtLJ/CqZriGg0eIAbAKMlN8Xy6kbv33FsEZSF7FufFFM705SQviHjjThfaQ4VNw=="
-  "resolved" "https://registry.npmjs.org/sass/-/sass-1.49.0.tgz"
-  "version" "1.49.0"
+"sass@*", "sass@^1.32.12":
+  "integrity" "sha512-zmXn03k3hN0KaiVTjohgkg98C3UowhL1/VSGdj4/VAAiMKGQOE80PFPxFP2Kyq0OUskPKcY5lImkhBKEHlypJA=="
+  "resolved" "https://registry.npmjs.org/sass/-/sass-1.32.12.tgz"
+  "version" "1.32.12"
   dependencies:
     "chokidar" ">=3.0.0 <4.0.0"
-    "immutable" "^4.0.0"
-    "source-map-js" ">=0.6.2 <2.0.0"
 
 "semver@^5.7.1":
   "integrity" "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ=="
@@ -1754,7 +1762,7 @@
   "resolved" "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz"
   "version" "3.0.0"
 
-"source-map-js@^1.0.2", "source-map-js@>=0.6.2 <2.0.0":
+"source-map-js@^1.0.2":
   "integrity" "sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw=="
   "resolved" "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz"
   "version" "1.0.2"
@@ -1928,7 +1936,7 @@
   "resolved" "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   "version" "1.1.2"
 
-"vite@^2.5.10", "vite@^2.7.13":
+"vite@^2.0.0 || ^3.0.0", "vite@^2.5.10", "vite@^2.7.13":
   "integrity" "sha512-fzMt2jK4vQ3yK56te3Kqpkaeq9DkcZfBbzHwYpobasvgYmP2SoAr6Aic05CsB4CzCZbsDv4sujX3pkEGhLabVQ=="
   "resolved" "https://registry.npmjs.org/vite/-/vite-2.9.15.tgz"
   "version" "2.9.15"
