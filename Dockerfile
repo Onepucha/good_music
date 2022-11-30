@@ -1,15 +1,22 @@
 FROM node:alpine as base
 
+# install simple http server for serving static content
+RUN npm install -g http-server
+
+# make the 'app' folder the current working directory
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+# copy both 'package.json' and 'package-lock.json' (if available)
+COPY package*.json ./
 
-RUN npx browserslist@latest --update-db && rm -rf node_modules && yarn install --production=true --frozen-lockfile && yarn cache clean
+# install project dependencies
+RUN rm -rf node_modules && npm install --production=false --frozen-lockfile
 
+# copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
 
-RUN yarn build
+# build app for production with minification
+RUN npm run build
 
-CMD ["yarn", "serve"]
-
-FROM base as production
+EXPOSE 8080
+CMD [ "http-server", "dist", "npm", "serve" ]
