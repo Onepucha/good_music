@@ -1,0 +1,50 @@
+{
+    "name": "good_music",
+    "version": "1.0.0",
+    "author": "Anatoliy Petushkov",
+    "license": "MIT",
+    "description": "good_music",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "scripts": {
+        "dev": "nodemon --config ./nodemon.config.json ./server/Server.ts --watch",
+        "build": "yarn run build:client && yarn run build:server",
+        "build:client": "vite build --ssrManifest --outDir ./dist/client",
+        "build:server": "vite build --ssr ./src/entry-server.ts --outDir ./dist/server && tsc --project ./server/tsconfig.json && tsc-alias -p ./server/tsconfig.json",
+        "serve": "cross-env NODE_ENV=development node ./dist/server/Server.js",
+        "serve-development": "cross-env NODE_ENV=development node ./dist/server/Server.js",
+        "serve-production": "cross-env NODE_ENV=production node ./dist/server/Server.js"
+    },
+    "dependencies": {
+        "@vitejs/plugin-vue": "^2.1.0",
+        "axios": "^0.25.0",
+        "cross-env": "^7.0.3",
+        "compression": "^1.7.4",
+        "dotenv": "^14.3.2",
+        "express": "^4.17.2",
+        "nodemon": "^2.0.15",
+        "pinia": "^2.0.10",
+        "ts-node": "^10.4.0",
+        "tsc-alias": "^1.5.0",
+        "vue": "^3.2.29",
+        "vite": "^2.7.13",
+        "vue-router": "^4.0.12"
+    },
+    "devDependencies": {
+        "@rollup/plugin-alias": "^3.1.9",
+        "@rollup/plugin-replace": "^3.0.1",
+        "@types/express": "^4.17.13",
+        "@types/node": "^17.0.12",
+        "@typescript-eslint/eslint-plugin": "^5.10.1",
+        "@typescript-eslint/parser": "^5.10.1",
+        "@vue/compiler-sfc": "^3.2.29",
+        "@vue/server-renderer": "^3.2.29",
+        "eslint": "^8.7.0",
+        "eslint-plugin-vue": "^8.4.0",
+        "sass": "^1.49.0",
+        "typescript": "^4.5.5",
+        "vue-eslint-parser": "^8.2.0"
+    }
+}
